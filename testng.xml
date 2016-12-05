@@ -19,10 +19,10 @@
 		</classes>
 	</test>
 
-<!-- <test name="Test"> -->
-<!--     <classes> -->
-<!--       <class name="TestJenkins.Jenkins.NewTest"/> -->
-<!--     </classes> -->
-<!--   </test> Test -->
+<test name="Test">
+    <classes>
+      <class name="TestJenkins.Jenkins.NewTest"/>
+    </classes>
+  </test> 
 
 </suite> <!-- Suite -->
