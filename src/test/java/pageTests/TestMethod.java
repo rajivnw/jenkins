@@ -8,6 +8,12 @@ import pageObjcs.SearchCompany;
 
 public class TestMethod {
 
+	/**
+	 * @author rajiv.sharma
+	 * @param cmpName
+	 *            This method for search a company
+	 */
+
 	@Test
 	@Parameters({"companyName"})
 	public void SearchCompany(String cmpName) {
@@ -17,6 +23,11 @@ public class TestMethod {
 		searchcmp.clickToSearchedCompany(cmpName);
 	}
 
+	/**
+	 * @author rajiv.sharma
+	 * @param cmpName
+	 *            This method is for retrieve data
+	 */
 	@Test
 	@Parameters({"companyName"})
 	public void RetrieveCompanyData(String cmpName) {
@@ -26,6 +37,12 @@ public class TestMethod {
 		retrieveData.lowHighPrices_52Weeks(cmpName);
 		retrieveData.EPSPrice(cmpName);
 	}
+	/**
+	 * @author rajiv.sharma
+	 * @param firstCMP
+	 * @param secondCMP
+	 *            This method for compare values
+	 */
 
 	@Test
 	@Parameters({"firstCompareCMP", "secondCompareCMP"})
