@@ -21,23 +21,23 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
-			<dependency>
+
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8</version>
 			<scope>compile</scope>
-			
+
 		</dependency>
-		
-		 <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>2.44.0</version>
-    </dependency> 
-		
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.44.0</version>
+		</dependency>
+
 	</dependencies>
-	
+
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -46,35 +46,41 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.19.1</version>
 					<configuration>
-					<forkMode>never</forkMode>
+						<forkMode>never</forkMode>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
+
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.8</version>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<reporting>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>2.8.1</version>
-            <configuration>
-              <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-               <docletArtifact>
-                <groupId>org.umlgraph</groupId>
-                <artifactId>doclet</artifactId>
-                <version>5.1</version>
-              </docletArtifact>
-              <show>private</show>
-              <additionalparam>-all -constructors</additionalparam>
-              <useStandardDocletOptions>false</useStandardDocletOptions>
-            </configuration>
-          </plugin>
-        </plugins>
- </reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+			</plugin>
+
+		</plugins>
+	</reporting>
 
 </project>
