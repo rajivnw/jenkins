@@ -19,10 +19,29 @@
 		</classes>
 	</test>
 
-<test name="Test">
-    <classes>
-      <class name="TestJenkins.Jenkins.NewTest"/>
-    </classes>
-  </test> 
 
-</suite> <!-- Suite -->
+	<test name="AIG_NYSE_Company">
+		<parameter name="companyName" value="AIG"></parameter>
+		<classes>
+			<class name="pageTests.TestMethod">
+				<methods>
+					<include name="SearchCompany"></include>
+					<include name="RetrieveCompanyData"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="CompareEPS_AXS_vs_AIG">
+		<parameter name="firstCompareCMP" value="AXS"></parameter>
+		<parameter name="secondCompareCMP" value="AIG"></parameter>
+		<classes>
+			<class name="pageTests.TestMethod">
+				<methods>
+					<include name="compareEPS"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 
